@@ -41,25 +41,90 @@ header {
 button#createAccBtn {
     height: 30px;
     width: 200px;
-    max-width: 135px;
     background: #1a73e8;
     color: #fff;
     text-align: center;
     border: 0;
-    border-radius: 4px;
+    border-radius: 3px;
     transition: all .4s ease;
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
+    outline: none;
 }
 
 button#createAccBtn:hover, button#createAccBtn:active {    
     box-shadow: 3px 3px 5px 0px #207cf57e;
     transition: all .4s ease;
+    border: 0;
+    outline: none;
 }
 
-#userName {
+.userName {
     font-size: 20px;
     padding-left: 40px;
     color: #9b9b9b;
+}
+
+#currUser {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#userList {
+    display: none;
+    cursor: pointer;
+    list-style: none;
+    position: fixed;
+    top: 75px;
+    background: #ebe8e8;
+    right: 20px;
+    min-width: 200px;
+    z-index: 5;
+}
+
+#userList::before {
+    content: '';
+    position: fixed;
+    top: 60px;
+    right: 40px;
+    width: 0px;
+    height: 0px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 15px solid #ebe8e8;
+}
+
+#userList li {
+    height: 40px;
+    border-bottom: 1px solid #dad8d8;
+    transition: all .4s ease;
+}
+
+#userList li:last-child {
+    border: 0;
+}
+
+#userList li:hover, #userList li:active {
+    background: #bbbbbb;
+    transition: all .4s ease;
+}
+
+#userList.active {
+    display: block
+}
+
+.user-list-content {
+    padding: 0px;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#userList li:hover .userName, #userList li:active .userName {
+    color: #747474;
+}
+
+.user-list-content .userName{
+    padding: 0px;
 }

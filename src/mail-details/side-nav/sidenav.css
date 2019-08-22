@@ -1,0 +1,59 @@
+.side-nav-bar {
+    min-width: 230px;
+    width: 17%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-right: 1px solid #ebe8e8;
+}
+
+.side-nav-bar button#composeMailBtn{
+    height: 30px;
+    width: 200px;
+    max-width: 135px;
+    margin-top: 20px;
+    background: #d93025;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    transition: all .4s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.side-nav-bar button#composeMailBtn:hover, .side-nav-bar button#composeMailBtn:active {    
+    box-shadow: 3px 3px 5px 0px #d930257e;
+    transition: all .4s ease;
+    border: 0;
+    outline: none;
+}
+
+.side-nav-bar ul {
+    list-style: none;
+    width: 60%;
+}
+
+.side-nav-bar ul li {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.side-nav-bar ul li:hover {
+    color: #d93025;
+}
+
+.side-nav-bar ul li.active {
+    color: #d93025;
+}
+
+.unread-mail {
+    float: right;
+    margin-right: 5px;
+}
