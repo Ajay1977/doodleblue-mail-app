@@ -8,7 +8,7 @@ function Header(props) {
     const { history } = props;
     const { userId, firstName, profilepic } = props.user;
     const userList = useSelector(state => state.accReducer);
-    console.log(userList);
+    //console.log(userList);
     useEffect(() => {
         const currUserElem = document.querySelector('#currUser');
         const userListElem = document.querySelector('#userList');

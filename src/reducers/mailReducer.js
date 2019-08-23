@@ -23,16 +23,16 @@ const mailReducer = (state = {}, action) => {
             let { senderId, recipientsId, mailSubject, mailBody, mailTime } = action.payload;
             let senderObj = state[senderId] === undefined ? initialMailObj : state[senderId];
             senderObj.sentcount += 1;
-            senderObj.sentmail = Object.assign([], ...senderObj.sentmail, [{
+            senderObj.sentmail = [...senderObj.sentmail, {
                 mailSubject, mailBody, mailTime, readFlag
-            }]);
+            }];
             newMailObj[senderId] = senderObj;
             recipientsId.map(el => {
                 let receiverObj = state[el] === undefined ? initialMailObj : state[el];
                 receiverObj.inboxcount += 1;
-                receiverObj.inboxmail = Object.assign([], ...receiverObj.inboxmail, [{
+                receiverObj.inboxmail = [...receiverObj.inboxmail, {
                     mailSubject, mailBody, mailTime, readFlag
-                }]);
+                }];
                 newMailObj[el] = receiverObj;
             });
             state = Object.assign({}, state, newMailObj);
