@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <ErrorBoundary>
-            <Route path='/' component={Dashboard} exact />
+            <Route path={process.env.PUBLIC_URL + '/'} component={Dashboard} exact />
             <Route path='/createAccount' component={connect(null, mapDispatchToProps)(CreateAccount)} exact />
             <Route path='/mailApp/inbox/:userId' component={MailDetails} exact />
             <Route path='/mailApp/sent/:userId' component={MailDetails} exact />
