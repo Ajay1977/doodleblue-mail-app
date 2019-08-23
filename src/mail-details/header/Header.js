@@ -34,7 +34,7 @@ function Header(props) {
         if (event.target.tagName === 'SPAN') {
             selectedUserId = event.target.parentElement.parentElement.getAttribute('data-key');
         }
-        history.push(`/mailApp/inbox/${selectedUserId}`);
+        history.push(`${process.env.PUBLIC_URL}/mailApp/inbox/${selectedUserId}`);
     }
 
     return (
@@ -43,7 +43,7 @@ function Header(props) {
                 <img src={doodlebluelogo} alt='doodleblue' />
             </div>
             <div className='userDetails'>
-                <button id="createAccBtn" onClick={() => history.push('/createAccount')}>Create Account</button>
+                <button id="createAccBtn" onClick={() => history.push(process.env.PUBLIC_URL + '/createAccount')}>Create Account</button>
                 <div id='currUser'>
                     <span key={userId} className="userName">{firstName}</span>
                     <img src={profilepic} alt="profilepic" className="userPic" />
