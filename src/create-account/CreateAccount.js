@@ -60,7 +60,7 @@ class CreateAccount extends React.Component {
         this.props.addUser(this.state);
         this.props.setInitMailCount(this.state);
         alert('User Added successfully');
-        this.props.history.push(`${process.env.PUBLIC_URL}/mailApp/inbox/${userId}`);
+        this.props.history.push(`/mailApp/inbox/${userId}`);
     }
 
     handleValidation() {
