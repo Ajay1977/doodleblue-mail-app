@@ -16,13 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter basename='/'>
+      <HashRouter>
         <Switch>
           <ErrorBoundary>
-            <Route path={'/'} component={Dashboard} exact />
-            <Route path={'/createAccount'} component={connect(null, mapDispatchToProps)(CreateAccount)} exact />
-            <Route path={'/mailApp/inbox/:userId'} component={MailDetails} exact />
-            <Route path={'/mailApp/sent/:userId'} component={MailDetails} exact />
+            <Route path='/' component={Dashboard} exact />
+            <Route path='/createAccount' component={connect(null, mapDispatchToProps)(CreateAccount)} exact />
+            <Route path='/mailApp/inbox/:userId' component={MailDetails} exact />
+            <Route path='/mailApp/sent/:userId' component={MailDetails} exact />
           </ErrorBoundary>
         </Switch>
       </HashRouter>

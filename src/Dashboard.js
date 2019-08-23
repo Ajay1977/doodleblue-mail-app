@@ -13,7 +13,7 @@ function Dashboard(props) {
                     <img src={brandlogo} id="brandlogo" alt="brandlogo" />
                 </Tween>
                 <Tween from={{ y: '50px', opacity: 0 }} to={{ y: 0, opacity: 1 }} duration={0.5} delay={0.2}>
-                    <button onClick={() => history.push(process.env.PUBLIC_URL + '/createAccount')}>Create Account</button>
+                    <button onClick={() => history.push('/createAccount')}>Create Account</button>
                 </Tween>
             </div>
         </div>
