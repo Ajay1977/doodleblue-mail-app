@@ -2,7 +2,7 @@
   "name": "doodleblue-mail-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Ajay1977.github.io/doodleblue-mail-app",
+  "homepage": "http://ajay1977.github.io/doodleblue-mail-app",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
