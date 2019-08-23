@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter, HashRouter } from 'react-router-dom';
 import CreateAccount from './create-account/CreateAccount';
 import MailDetails from './mail-details/MailDetails';
 import Dashboard from './Dashboard';
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <ErrorBoundary>
             <Route path={process.env.PUBLIC_URL + '/'} component={Dashboard} exact />
@@ -25,7 +25,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/mailApp/sent/:userId'} component={MailDetails} exact />
           </ErrorBoundary>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
