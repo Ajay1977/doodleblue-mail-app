@@ -16,13 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename='/'>
         <Switch>
           <ErrorBoundary>
-            <Route path={process.env.PUBLIC_URL + '/'} component={Dashboard} exact />
-            <Route path={process.env.PUBLIC_URL + '/createAccount'} component={connect(null, mapDispatchToProps)(CreateAccount)} exact />
-            <Route path={process.env.PUBLIC_URL + '/mailApp/inbox/:userId'} component={MailDetails} exact />
-            <Route path={process.env.PUBLIC_URL + '/mailApp/sent/:userId'} component={MailDetails} exact />
+            <Route path={'/'} component={Dashboard} exact />
+            <Route path={'/createAccount'} component={connect(null, mapDispatchToProps)(CreateAccount)} exact />
+            <Route path={'/mailApp/inbox/:userId'} component={MailDetails} exact />
+            <Route path={'/mailApp/sent/:userId'} component={MailDetails} exact />
           </ErrorBoundary>
         </Switch>
       </HashRouter>
