@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/doodleblue-mail-app/precache-manifest.65bfaef54eb933c36380c0f0d2533a5a.js"
+  "/doodleblue-mail-app/precache-manifest.ddb8443b022e6fbdd7a897a149f6fb29.js"
 );
 
 self.addEventListener('message', (event) => {
