@@ -11,7 +11,29 @@ class CreateAccount extends React.Component {
             'emailId': '',
             'mobileNum': '',
             'profilepic': '',
-            'userId': ''
+            'userId': '',
+            'mandatory': {
+                'firstName': {
+                    'name': 'First Name',
+                    'required': true
+                },
+                'lastName': {
+                    'name': 'Last Name',
+                    'required': true
+                },
+                'emailId': {
+                    'name': 'Email ID',
+                    'required': true
+                },
+                'mobileNum': {
+                    'name': 'Mobile Number',
+                    'required': true
+                },
+                'profilepic': {
+                    'name': 'Profile Picture',
+                    'required': true
+                },
+            }
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleLoadImage = this.handleLoadImage.bind(this);
@@ -30,12 +52,30 @@ class CreateAccount extends React.Component {
 
     async handleSubmit(event) {
         event.preventDefault();
+        if (this.handleValidation() === false) {
+            return;
+        }
         const userId = `${this.state.firstName.toLowerCase()}_${new Date().getTime()}`;
         await this.setState({ 'userId': userId });
         this.props.addUser(this.state);
         this.props.setInitMailCount(this.state);
         alert('User Added successfully');
         this.props.history.push(`/mailApp/inbox/${userId}`);
+    }
+
+    handleValidation() {
+        let validatePass = true;
+        let mandArr = Object.keys(this.state.mandatory);
+        for (let i = 0; i < mandArr.length; i++) {
+            let el = mandArr[i];
+            if (this.state.mandatory[el].required && this.state[el] === '') {
+                document.querySelector(`input[name='${el}']`).focus()
+                alert(`${this.state.mandatory[el].name} is mandatory`);
+                validatePass = false;
+                break;
+            }
+        }
+        return validatePass;
     }
 
     render() {

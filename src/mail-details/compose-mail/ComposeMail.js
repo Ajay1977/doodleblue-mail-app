@@ -46,7 +46,7 @@ export default function ComposeMail(props) {
             mailTime: `${currDate.getMonth() + 1}/${currDate.getDate()}/${currDate.getFullYear()} ${currDate.getHours()}:${currDate.getMinutes()}`
         }
         dispatch(sendMail(mailObj));
-        alert('Mail sent!!!')
+        alert('Mail sent!!!');
         props.composeMail();
     }
 
