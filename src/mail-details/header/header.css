@@ -84,7 +84,7 @@ button#createAccBtn:hover, button#createAccBtn:active {
     z-index: 5;
 }
 
-#userList::before {
+#userList.active::before {
     content: '';
     position: fixed;
     top: 60px;

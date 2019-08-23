@@ -8,7 +8,7 @@ function SideNav(props) {
         <div className='side-nav-bar'>
             <button id='composeMailBtn' onClick={() => props.composeMail()}>Compose</button>
             <ul>
-                <li className="side-nav-list active" onClick={() => history.push(`/mailApp/${user.userId}`)}>
+                <li className="side-nav-list active" onClick={() => history.push(`/mailApp/inbox/${user.userId}`)}>
                     Inbox
                     <span className='unread-mail' id='unreadMailInbox'>{inbox}</span>
                 </li>

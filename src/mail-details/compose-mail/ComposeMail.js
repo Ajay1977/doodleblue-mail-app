@@ -45,7 +45,8 @@ export default function ComposeMail(props) {
             mailBody: document.getElementById('messageInp').value,
             mailTime: `${currDate.getMonth() + 1}/${currDate.getDate()}/${currDate.getFullYear()} ${currDate.getHours()}:${currDate.getMinutes()}`
         }
-        dispatch(sendMail(mailObj))
+        dispatch(sendMail(mailObj));
+        alert('Mail sent!!!')
         props.composeMail();
     }
 

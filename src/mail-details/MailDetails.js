@@ -31,7 +31,7 @@ export default function MailDetails({ match }) {
             <div className='mail-details' style={styles}>
                 <SideNav user={userObj} composeMail={handleMailFlagChange} inbox={inboxCount} sent={sentMailCount} />
                 <Route exact path={'/mailApp/sent/:userId'} component={() => <MailList user={userObj} mails={sentMail} />} />
-                <Route exact path={'/mailApp/:userId'} component={() => <MailList user={userObj} mails={inboxMail} />} />
+                <Route exact path={'/mailApp/inbox/:userId'} component={() => <MailList user={userObj} mails={inboxMail} />} />
                 {newMailFlag ? <ComposeMail user={userObj} composeMail={handleMailFlagChange} /> : ''}
             </div>
         </div>
