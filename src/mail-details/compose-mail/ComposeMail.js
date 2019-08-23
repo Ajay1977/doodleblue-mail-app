@@ -79,7 +79,7 @@ export default function ComposeMail(props) {
                         })
                     }
                 </div>
-                <input id="recipientInp" name='recipients' placeholder='Recipients' onChange={handleRecipientChange} />
+                <input id="recipientInp" name='recipients' placeholder='Recipients (Type username here)' onChange={handleRecipientChange} />
             </div>
             <div className='container subject-container'>
                 <input id="subjectInp" type='text' name='subject' placeholder='Subject' />
