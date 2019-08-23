@@ -14,10 +14,10 @@ export default function ComposeMail(props) {
         let tempVal = event.target.value;
         if (tempVal.length >= 3) {
             let filterUserId = Object.keys(userList).filter(el => {
-                return userId !== el && userList[el] && userList[el].firstName.toLowerCase().startsWith(tempVal.toLowerCase());
+                return selectUserIdList.includes(el) === false && userId !== el && userList[el] && userList[el].firstName.toLowerCase().startsWith(tempVal.toLowerCase());
             });
             if (filterUserId.length > 0) {
-                setUserMailIdList([filterUserId]);
+                setUserMailIdList([...filterUserId]);
                 document.querySelector('.user-mail-list').classList.add('active');
             }
         } else {
@@ -70,6 +70,8 @@ export default function ComposeMail(props) {
                 <div className='recipientList'>
                     {
                         selectUserIdList.map(el => {
+                            console.log(el);
+                            console.log(userList[el]);
                             return (
                                 <span className='recipient' key={el} data-key={el} >
                                     {userList[el] && userList[el].firstName}
