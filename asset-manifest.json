@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/doodleblue-mail-app/static/css/main.9ee87a42.chunk.css",
-    "main.js": "/doodleblue-mail-app/static/js/main.1ddadfc9.chunk.js",
-    "main.js.map": "/doodleblue-mail-app/static/js/main.1ddadfc9.chunk.js.map",
+    "main.js": "/doodleblue-mail-app/static/js/main.efa84952.chunk.js",
+    "main.js.map": "/doodleblue-mail-app/static/js/main.efa84952.chunk.js.map",
     "runtime~main.js": "/doodleblue-mail-app/static/js/runtime~main.50d3198c.js",
     "runtime~main.js.map": "/doodleblue-mail-app/static/js/runtime~main.50d3198c.js.map",
     "static/js/2.f5e83c7e.chunk.js": "/doodleblue-mail-app/static/js/2.f5e83c7e.chunk.js",
     "static/js/2.f5e83c7e.chunk.js.map": "/doodleblue-mail-app/static/js/2.f5e83c7e.chunk.js.map",
     "index.html": "/doodleblue-mail-app/index.html",
-    "precache-manifest.bdd07a72ecca1e0a44ae76e002e12aa7.js": "/doodleblue-mail-app/precache-manifest.bdd07a72ecca1e0a44ae76e002e12aa7.js",
+    "precache-manifest.5becf32d79c6fafffc4ad67a2fa48c30.js": "/doodleblue-mail-app/precache-manifest.5becf32d79c6fafffc4ad67a2fa48c30.js",
     "service-worker.js": "/doodleblue-mail-app/service-worker.js",
     "static/css/main.9ee87a42.chunk.css.map": "/doodleblue-mail-app/static/css/main.9ee87a42.chunk.css.map",
     "static/media/doodlebluelogo.png": "/doodleblue-mail-app/static/media/doodlebluelogo.8f900bba.png"
