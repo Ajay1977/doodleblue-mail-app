@@ -21,13 +21,16 @@ export default function MailDetails({ match }) {
     const sentMailCount = useSelector(state => state.mailReducer[userObj.userId].sentcount);
 
     const [newMailFlag, setNewMailFlag] = useState(false);
-    const handleMailFlagChange = () => {
-        setNewMailFlag(!newMailFlag);
+    const handleMailFlagChange = (flag) => {
+        if (flag == undefined)
+            setNewMailFlag(!newMailFlag);
+        else
+            setNewMailFlag(flag);
     }
 
     return (
         <div className='mail-dets-content'>
-            <Header user={userObj} />
+            <Header user={userObj} composeMail={handleMailFlagChange} />
             <div className='mail-details' style={styles}>
                 <SideNav user={userObj} composeMail={handleMailFlagChange} inbox={inboxCount} sent={sentMailCount} />
                 <Route exact path={'/mailApp/sent/:userId'} component={() => <MailList user={userObj} mails={sentMail} />} />

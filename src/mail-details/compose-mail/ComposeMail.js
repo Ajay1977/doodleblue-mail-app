@@ -47,7 +47,7 @@ export default function ComposeMail(props) {
         }
         dispatch(sendMail(mailObj));
         alert('Mail sent!!!');
-        props.composeMail();
+        props.composeMail(false);
     }
 
     const deleteRecipientId = (event) => {
@@ -57,7 +57,7 @@ export default function ComposeMail(props) {
             return el !== recipientId;
         });
         setSelectUserIdList([updateSelectUserList]);
-        recipientElem.remove();
+        // recipientElem.remove();
     }
 
     return (
@@ -70,8 +70,6 @@ export default function ComposeMail(props) {
                 <div className='recipientList'>
                     {
                         selectUserIdList.map(el => {
-                            console.log(el);
-                            console.log(userList[el]);
                             return (
                                 <span className='recipient' key={el} data-key={el} >
                                     {userList[el] && userList[el].firstName}
