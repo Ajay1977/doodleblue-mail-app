@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MailList from './mail-list/MailList';
 import SideNav from './side-nav/SideNav';
 import ComposeMail from './compose-mail/ComposeMail';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Header from './header/Header';
 import { useSelector } from 'react-redux';
 
@@ -22,7 +22,7 @@ export default function MailDetails({ match }) {
 
     const [newMailFlag, setNewMailFlag] = useState(false);
     const handleMailFlagChange = (flag) => {
-        if (flag == undefined)
+        if (flag === undefined)
             setNewMailFlag(!newMailFlag);
         else
             setNewMailFlag(flag);

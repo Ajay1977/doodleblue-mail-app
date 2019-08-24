@@ -37,6 +37,10 @@ export default function ComposeMail(props) {
     }
 
     const handleSendMail = () => {
+        if (selectUserIdList.length === 0) {
+            alert('Please select atleast one recipient');
+            return;
+        }
         let currDate = new Date()
         let mailObj = {
             senderId: userId,
@@ -56,7 +60,11 @@ export default function ComposeMail(props) {
         let updateSelectUserList = selectUserIdList.filter(el => {
             return el !== recipientId;
         });
-        setSelectUserIdList([updateSelectUserList]);
+        if (updateSelectUserList.length === 0) {
+            setSelectUserIdList([]);
+        } else {
+            setSelectUserIdList(updateSelectUserList);
+        }
         // recipientElem.remove();
     }
 
