@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58ae308c54a3fecc5f694f727a5c7060",
+    "revision": "0f955a941e705fd18d35eb8b4881133f",
     "url": "/doodleblue-mail-app/index.html"
   },
   {
-    "revision": "404ccd3acdae3361abf9",
+    "revision": "19c1d70bc83c78e2fbd3",
     "url": "/doodleblue-mail-app/static/css/main.9ee87a42.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doodleblue-mail-app/static/js/2.488d728f.chunk.js"
   },
   {
-    "revision": "404ccd3acdae3361abf9",
-    "url": "/doodleblue-mail-app/static/js/main.3a843d6f.chunk.js"
+    "revision": "19c1d70bc83c78e2fbd3",
+    "url": "/doodleblue-mail-app/static/js/main.227a59a9.chunk.js"
   },
   {
     "revision": "be818dacd85539ddaf95",
