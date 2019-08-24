@@ -41,7 +41,7 @@ function Header(props) {
     return (
         <header>
             <div className='logo'>
-                <img src={doodlebluelogo} alt='doodleblue' />
+                <img src={doodlebluelogo} alt='doodleblue' onClick={() => history.push('/')} />
             </div>
             <div className='userDetails'>
                 <button id="createAccBtn" onClick={() => history.push('/createAccount')}>Create Account</button>
