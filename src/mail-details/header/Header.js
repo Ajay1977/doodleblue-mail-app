@@ -34,7 +34,7 @@ function Header(props) {
         if (event.target.tagName === 'SPAN') {
             selectedUserId = event.target.parentElement.parentElement.getAttribute('data-key');
         }
-        props.composeMail(false); ajay
+        props.composeMail(false);
         history.push(`/mailApp/inbox/${selectedUserId}`);
     }
 
